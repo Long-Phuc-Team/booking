@@ -36,4 +36,8 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    protected $table = 'user';
+    protected $primaryKey = 'username';
+    public $timestamps = false;
 }

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Ticket Online</title>
+	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/bootstrap.css">
+	<link rel="stylesheet" href="assets/styles/styleofticket.css">
+</head>
+<body>
+	<div class="bgblack">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6"></div>
+				<div class="col-sm-6">
+					<div class="row">
+						<div class="col-sm-6">
+								<p>Tổng đài vé online:<a href=""> 1900 000</a></p>
+						</div>
+						<div class="col-sm-6">
+								<p>Email:<a href=""> cskh@ltl.vn</a></p>
+						</div>
+					</div>		
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="menu">
+		<nav class="navbar navbar-expand-sm">
+			<div class="container">
+				<div class="row">
+					<button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#menutren" aria-controls="collapsibleNavId"
+						aria-expanded="false" aria-label="Toggle navigation"></button>
+					<div class="collapse navbar-collapse" id="menutren">
+							<a class="navbar-brand" href="#"><img src="assets/img/lg.png" alt=""></a>
+						<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+							<li class="nav-item active">
+								<a class="nav-link" href="./index.html">Trang Chủ</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="./ticketbooking.html">đặt vé</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</div>
+	<!-- end menu -->
+    <!-- Content -->
+    <div class="ticketbooking">
+        <div class="container">
+            <div class="row text-xs-center">
+                <div class="col-sm-12">
+                    <span>Hà Nội</span>
+                    <i class="fas fa-long-arrow-alt-right iconticket"></i>
+                    <span>Nghệ An</span>
+                    <i class="fas fa-chevron-left iconticket"></i>
+                    <span>14/10/2019</span>
+                    <i class="fas fa-chevron-right iconticket"></i>
+                </div>
+            </div>
+        </div>
+	</div>
+	<!-- end content -->
+	<!-- Search content -->
+	<div class="searchcontent">
+		<!-- khoi 1 -->
+        <div class="container content">
+            <div class="row agencyinfo">  
+                <div class="col-sm-2">               
+                    <h3><i class="fas fa-subway mr-1"></i>Phương Trang</h3>
+                </div>
+                <div class="col-sm-3">
+                    <h3><i class="fas fa-bus mr-1"></i>Xe Giường Nằm</h3>
+                </div>
+                <div class="col-sm-2 text-xs-left"><h3><i class="fas fa-clock mr-1"></i>8:00</h3></div>
+                <div class="col-sm-2"><h3><i class="fas fa-couch mr-1"></i>30  chỗ online</h3></div>
+                <div class="col-sm-2"><h3><i class="fas fa-dollar-sign mr-1"></i>100000 VNĐ</h3></div>
+                <div class="col-sm-1"><button id="btnfirst" class="btn btn-success"
+                data-toggle="collapse" data-target="#abc">Chọn chỗ</button></div>
+                <div id="abc" class="collapse">
+                    <div class="container contentsecond">
+                        <div class="row routeinfo">
+                                <div class="container contentthird">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="row seatinfo">
+                                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                                    <label class="btn btn-secondary">
+                                                      	<input type="radio" name="options" autocomplete="off" >1
+													</label>
+													<label class="btn btn-secondary">
+														<input type="radio" name="options" autocomplete="off" >2
+													</label>
+                                                  </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 cusinfo">
+                                            <form action="" method="">
+												<div class="form-group row">
+													<label for="" class="col-sm-4 col-form-label">Lịch Trình</label>
+													<div class="col-sm-8">
+														<input type="text" class="form-control" name="" id="" value="" disabled>
+													</div>
+												</div>
+												<div class="form-group row">
+													<label for="" class="col-sm-4 col-form-label">Tổng tiền</label>
+													<div class="col-sm-8">
+														<input type="text" readonly class="form-control" id="" value="250.000đ" disabled>
+													</div>
+												</div>
+												<div class="form-group row">
+													<label for="" class="col-sm-4 col-form-label">Họ & Tên</label>
+													<div class="col-sm-8">
+														<input type="text" class="form-control" id="" placeholder="Nguyễn Văn A">
+													</div>
+												</div>
+												<div class="form-group row">
+													<label for="" class="col-sm-4 col-form-label">Số điện thoại</label>
+													<div class="col-sm-8">
+														<input type="text" class="form-control" id="" placeholder="0332566xxx">
+													</div>
+												</div>
+												<div class="form-group row">
+													<label for="" class="col-sm-4 col-form-label">Email</label>
+													<div class="col-sm-8">
+														<input type="email" class="form-control" id="" placeholder="xeca@gmail.com">
+													</div>
+												</div>
+												<div class="form-group row">
+													<label for="" class="col-sm-4 col-form-label">Điểm đón</label>
+													<div class="col-sm-8">
+														<input type="text" class="form-control" id="" placeholder="Honolulu">
+													</div>
+												</div>
+												<div class="form-group row">
+													<label for="" class="col-sm-4 col-form-label">Ghi chú</label>
+													<div class="col-sm-8">
+														<input type="text" class="form-control" id="" placeholder="aloha...">
+													</div>
+												</div>
+												<div class="form-group row">
+													<label for="" class="col-sm-4 col-form-label"></label>
+													<div class="col-sm-8">
+														<button type="button" class="btn btn-danger">Đặt Vé</button>
+														<button type="reset" class="btn btn-success">Điền Lại</button>
+													</div>
+												</div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div> 
+                    </div>
+                </div>    
+            </div>
+		</div>
+		<!-- end khoi 1 -->
+		<!-- khoi 2 -->
+		<div class="container content">
+            <div class="row agencyinfo">  
+                <div class="col-sm-2">               
+                    <h3><i class="fas fa-subway mr-1"></i>Thành Bưởi</h3>
+                </div>
+                <div class="col-sm-3">
+                    <h3><i class="fas fa-bus mr-1"></i>Xe Thường</h3>
+                </div>
+                <div class="col-sm-2 text-xs-left"><h3><i class="fas fa-clock mr-1"></i>12:00</h3></div>
+                <div class="col-sm-2"><h3><i class="fas fa-couch mr-1"></i>25  chỗ online</h3></div>
+                <div class="col-sm-2"><h3><i class="fas fa-dollar-sign mr-1"></i>100000 VNĐ</h3></div>
+                <div class="col-sm-1"><button id="btnfirst" class="btn btn-success"
+                data-toggle="collapse" data-target="#abc">Chọn chỗ</button></div>
+                <div id="abc" class="collapse">
+                    <div class="container contentsecond">
+                        <div class="row routeinfo">
+                                <div class="container contentthird">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="row seatinfo">
+                                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                                    <label class="btn btn-secondary">
+                                                      <input type="radio" name="options" autocomplete="off" >
+                                                    </label>
+                                                  </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 cusinfo">
+                                            <form action="" method="">
+												<div class="form-group row">
+													<label for="" class="col-sm-4 col-form-label">Lịch Trình</label>
+													<div class="col-sm-8">
+														<input type="text" class="form-control" name="" id="" value="" disabled>
+														
+													</div>
+												</div>
+												<div class="form-group row">
+													<label for="" class="col-sm-4 col-form-label">Tổng tiền</label>
+													<div class="col-sm-8">
+														<input type="text" readonly class="form-control" id="" value="250.000đ" disabled>
+													</div>
+												</div>
+												<div class="form-group row">
+													<label for="" class="col-sm-4 col-form-label">Họ & Tên</label>
+													<div class="col-sm-8">
+														<input type="text" class="form-control" id="" placeholder="Nguyễn Văn A">
+													</div>
+												</div>
+												<div class="form-group row">
+													<label for="" class="col-sm-4 col-form-label">Số điện thoại</label>
+													<div class="col-sm-8">
+														<input type="text" class="form-control" id="" placeholder="0332566xxx">
+													</div>
+												</div>
+												<div class="form-group row">
+													<label for="" class="col-sm-4 col-form-label">Email</label>
+													<div class="col-sm-8">
+														<input type="email" class="form-control" id="" placeholder="xeca@gmail.com">
+													</div>
+												</div>
+												<div class="form-group row">
+													<label for="" class="col-sm-4 col-form-label">Điểm đón</label>
+													<div class="col-sm-8">
+														<input type="text" class="form-control" id="" placeholder="Honolulu">
+													</div>
+												</div>
+												<div class="form-group row">
+													<label for="" class="col-sm-4 col-form-label">Ghi chú</label>
+													<div class="col-sm-8">
+														<input type="text" class="form-control" id="" placeholder="aloha...">
+													</div>
+												</div>
+												<div class="form-group row">
+													<label for="" class="col-sm-4 col-form-label"></label>
+													<div class="col-sm-8">
+														<button type="button" class="btn btn-danger">Đặt Vé</button>
+														<button type="reset" class="btn btn-success">Điền Lại</button>
+													</div>
+												</div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div> 
+                    </div>
+                </div>    
+            </div>
+		</div>
+		<!-- end khoi 2 -->
+	</div>
+	<!-- end searchcontent -->
+	<!-- footer -->
+	<div class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4">
+					<h3>về chúng tôi</h3>
+					<div class="cont">
+						<ul>
+							<li><a href="">Về Chúng Tôi</a></li>
+							<li><a href="">Tuyển Dụng</a></li>
+							<li><a href="">Liên Hệ</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<h3>Hỗ trợ</h3>
+					<div class="cont">
+						<ul>
+							<li><a href="">Quy Định</a></li>
+							<li><a href="">Câu Hỏi Thường Gặp</a></li>
+							<li><a href="">Chính Sách Bảo Mật</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-sm-4 contacts">
+					<h3>liên hệ</h3>
+					<div class="c1">Trụ sở chính</div>
+					<div class="c2">
+						<div><i class="fas fa-map-marker-alt"></i>	233/34/17, Nguyễn Văn Cừ, Phường An Hoà, Quận Ninh Kiều, Thành phố Cần Thơ</div>
+						<div><i class="fas fa-phone"></i>	1900 0000 - 0332 566 444</div>
+						<div><i class="fas fa-envelope"></i> cskh@ltl.vn</div>
+					</div>
+					<div class="socialcontent">
+						<a class="socialitem" href=""><i class="fab fa-facebook-f"></i></a>
+						<a class="socialitem" href=""><i class="fab fa-twitter"></i></a>
+						<a class="socialitem" href=""><i class="fab fa-youtube"></i></a>
+						<a class="socialitem" href=""><i class="fab fa-google-plus-g"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footerbot">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4 col-xs-4"><p>© 2019-2025 xeca.vn All Rights Reserved</p></div>
+				<div class="col-sm-4 col-xs-4"></div>
+				<div class="col-sm-2 col-xs-2"><img src="assets/img/dadangkybct.png" alt=""></div>
+				<div class="col-sm-2 col-xs-2"><img src="assets/img/bo-cong-thuong.png" alt=""></div>
+			</div>
+		</div>
+	</div>
+	<!-- end foooter -->
+	
+
+		
+
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/bootstrap/bootstrap.js"></script>
+    <script src="assets/fontawesome/fontawesome.js"></script>
+    <script src="assets/fontawesome/solid.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

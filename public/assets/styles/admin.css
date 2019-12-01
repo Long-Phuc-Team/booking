@@ -1,0 +1,48 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.menu{
+    background: #398bdf;
+}
+.menu ul li a{
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: -25px;
+    margin-right: 15px;
+    font-size: 13px;
+}
+.navbar-brand img{
+    width: 100px;
+    max-height: 62px;
+}
+.navbar-brand {
+    float: left;
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+    margin-right: 2rem !important;
+    font-size: 1.25rem;
+    line-height: inherit;
+}
+.footerbot{
+    background-color: #000;
+    padding: 10px 10px;
+}
+.footerbot img{
+    width: 140px;
+    height: 55px;
+}
+.footerbot p{
+    color: #f4f4f4;
+    font-size: 15px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding-top: 15px;
+}
+.col-12{
+    background-color: #5585992e;
+}
+
+
