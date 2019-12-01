@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Ticket Online</title>
-	<link rel="stylesheet" href="./vendor/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./vendor/bootstrap/bootstrap.css">
-	<link rel="stylesheet" href="./vendor/styles/admin.css">
+    <title>Ticket Online</title>
+    <base href="{{asset('')}}">
+	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/bootstrap.css">
+	<link rel="stylesheet" href="assets/styles/admin.css">
 </head>
 <body>
 	<div class="menu">
@@ -17,7 +18,7 @@
 					<button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#menutren" aria-controls="collapsibleNavId"
 						aria-expanded="false" aria-label="Toggle navigation"></button>
 					<div class="collapse navbar-collapse" id="menutren">
-							<a class="navbar-brand" href="#"><img src="./vendor/img/lg-white.png" alt=""></a>
+							<a class="navbar-brand" href="#"><img src="assets/img/lg-white.png" alt=""></a>
 						<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
 							<li class="nav-item active">
 								<a class="nav-link" href="./admin.html">Trang Chủ</a>
@@ -52,7 +53,7 @@
     <!-- content -->
     <div class="col-12 content">
             <div class="container">
-                <h2 class="pt-1">DANH SÁCH HÃNG XE</h2>
+                <h2 class="pt-1">DANH SÁCH VÉ XE</h2>
                 <hr>
                 <div class="form-group row">
                     <div class="col-sm-5 text-xs-left">
@@ -63,41 +64,43 @@
                 <table class="table table-bordered table-striped table-responsive" id="mytable">
                     <colgroup>
                         <col width="10" span="1">
-                        <col width="300" span="1">
                         <col width="200" span="1">
-                        <col width="300" span="1">
-                        <col width="150" span="1">
+                        <col width="100" span="1">
+                        <col width="100" span="1">
+                        <col width="180" span="1">
+                        <col width="180" span="1">
+                        <col width="180" span="1">
+                        <col width="180" span="1">
                         <col width="20" span="2">
                     </colgroup>
                   <thead>
                     <tr>
                         <th>ID</th>
-                        <th>TenHangXe</th>    
-                        <th>DienThoai</th>
-                        <th>MoTa</th>
-                        <th>NgayThem</th>
-                        <th colspan="2"><a href="./qlhx_add.html"><button class="btn btn-block btn-outline-success" data-toggle="tooltip" data-placement="top" title="Thêm"><i class="fas fa-plus-circle"></i></button></a></th>
+                        <th>Tuyen</th>
+                        <th>NgayDi</th>
+                        <th>GioDi</th>
+                        <th>TenKhachHang</th>
+                        <th>DienThoai</th>     
+                        <th>Ghe</th>
+                        <th>GiaVe</th>
+                        <!-- <th colspan="2"><a href="./qlvx_add.html"><button class="btn btn-block btn-outline-success" data-toggle="tooltip" data-placement="top" title="Thêm"><i class="fas fa-plus-circle"></i></button></a></th> -->
                     </tr>
                   </thead>
                   <tbody id="myTablebd">
-                    <tr>
-                        <td>1</td>
-                        <td>Phương Trang</td>
-                        <td>1900123121</td>
-                        <td>...</td>
-                        <td>...</td>
-                        <td><a href="./qlhx_edit.html"><button class="btn btn-block btn-outline-info" data-toggle="tooltip" data-placement="top" title="Sửa"><i class="fas fa-edit"></i></button></a></td>
-                        <td><a href=""><button class="btn btn-block btn-outline-danger" data-toggle="tooltip" data-placement="top" title="Xoá"><i class="fas fa-trash-alt"></i></button></a></td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Thành Bưởi</td>
-                        <td>1900123121</td>
-                        <td>...</td>
-                        <td>...</td>
-                        <td><a href="./qlhx_edit.html"><button class="btn btn-block btn-outline-info" data-toggle="tooltip" data-placement="top" title="Sửa"><i class="fas fa-edit"></i></button></a></td>
-                        <td><a href=""><button class="btn btn-block btn-outline-danger" data-toggle="tooltip" data-placement="top" title="Xoá"><i class="fas fa-trash-alt"></i></button></a></td>
-                    </tr>
+                      @foreach ($ds_ve_xe as $ve_xe)
+                        <tr>
+                            <td>{{$ve_xe->IDVeXe}}</td>
+                            <td>{{$ve_xe->TenTuyen}}</td>
+                            <td>{{$ve_xe->NgayDi}}</td>
+                            <td>{{$ve_xe->GioDi}}</td>
+                            <td>{{$ve_xe->TenKhachHang}}</td>
+                            <td>{{$ve_xe->DienThoai}}</td>    
+                            <td>{{$ve_xe->Ghe}}</td>
+                            <td>{{$ve_xe->GiaVe}}</td>
+                            <td><a href="./qlvx_detail.html"><button class="btn btn-block btn-outline-info" data-toggle="tooltip" data-placement="top" title="Chi tiết"><i class="fas fa-info-circle"></i></button></a></td>
+                            <td><a href=""><button class="btn btn-block btn-outline-danger" data-toggle="tooltip" data-placement="top" title="Xoá"><i class="fas fa-trash-alt"></i></button></a></td>
+                        </tr>
+                      @endforeach
                   </tbody>
                 </table>
                 <div class="pagination pb-2">
@@ -115,16 +118,16 @@
             <div class="row">
                 <div class="col-sm-4 col-xs-4"><p>© 2019-2025 xeca.vn All Rights Reserved</p></div>
                 <div class="col-sm-4 col-xs-4"></div>
-                <div class="col-sm-2 col-xs-2"><img src="./vendor/img/dadangkybct.png" alt=""></div>
-                <div class="col-sm-2 col-xs-2"><img src="./vendor/img/bo-cong-thuong.png" alt=""></div>
+                <div class="col-sm-2 col-xs-2"><img src="assets/img/dadangkybct.png" alt=""></div>
+                <div class="col-sm-2 col-xs-2"><img src="assets/img/bo-cong-thuong.png" alt=""></div>
             </div>
         </div>
     </div>
     <!-- end footer -->   
-	<script src="./vendor/bootstrap/bootstrap.js"></script>
-    <script src="./vendor/fontawesome/fontawesome.js"></script>
-    <script src="./vendor/fontawesome/solid.js"></script>
-    <script src="./vendor/js/script.js"></script>
+	<script src="assets/bootstrap/bootstrap.js"></script>
+    <script src="assets/fontawesome/fontawesome.js"></script>
+    <script src="assets/fontawesome/solid.js"></script>
+    <script src="assets/js/script.js"></script>
 
     <!-- Search Form -->
     <script>

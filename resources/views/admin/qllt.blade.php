@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Ticket Online</title>
-	<link rel="stylesheet" href="./vendor/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./vendor/bootstrap/bootstrap.css">
-	<link rel="stylesheet" href="./vendor/styles/admin.css">
+    <title>Ticket Online</title>
+    <base href="{{asset('')}}">
+	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/bootstrap.css">
+	<link rel="stylesheet" href="assets/styles/admin.css">
 </head>
 <body>
 	<div class="menu">
@@ -17,7 +18,7 @@
 					<button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#menutren" aria-controls="collapsibleNavId"
 						aria-expanded="false" aria-label="Toggle navigation"></button>
 					<div class="collapse navbar-collapse" id="menutren">
-							<a class="navbar-brand" href="#"><img src="./vendor/img/lg-white.png" alt=""></a>
+							<a class="navbar-brand" href="#"><img src="assets/img/lg-white.png" alt=""></a>
 						<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
 							<li class="nav-item active">
 								<a class="nav-link" href="./admin.html">Trang Chủ</a>
@@ -71,27 +72,29 @@
                         <col width="20" span="2">
                     </colgroup>
                   <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Tuyen</th>
-                        <th>Xe</th>      
-                        <th>GioDi</th>
-                        <th>GioDen</th>
-                        <th>NgayDi</th>
-                        <th colspan="2"><a href="./qllt_add.html"><button class="btn btn-block btn-outline-success" data-toggle="tooltip" data-placement="top" title="Thêm"><i class="fas fa-plus-circle"></i></button></a></th>
-                    </tr>
+                        <tr>
+                            <th>ID</th>
+                            <th>Tuyen</th>
+                            <th>SoXe</th>      
+                            <th>GioDi</th>
+                            <th>GioDen</th>
+                            <th>NgayDi</th>
+                            <th colspan="2"><a href="./qllt_add.html"><button class="btn btn-block btn-outline-success" data-toggle="tooltip" data-placement="top" title="Thêm"><i class="fas fa-plus-circle"></i></button></a></th>
+                        </tr>
                   </thead>
                   <tbody id="myTablebd">
-                    <tr>
-                        <td>1</td>
-                        <td>...</td>
-                        <td>67G1-51413</td>     
-                        <td>6:00 am</td>
-                        <td>10:00 am</td>
-                        <td>30/11/2019</td>
-                        <td><a href="./qllt_detail.html"><button class="btn btn-block btn-outline-info" data-toggle="tooltip" data-placement="top" title="Chi tiết"><i class="fas fa-info-circle"></i></button></a></td>
-                        <td><a href=""><button class="btn btn-block btn-outline-danger" data-toggle="tooltip" data-placement="top" title="Xoá"><i class="fas fa-trash-alt"></i></button></a></td>
-                    </tr>
+                      @foreach ($ds_lich_trinh as $lich_trinh)
+                        <tr>
+                            <td>{{$lich_trinh->IDLichTrinh}}</td>
+                            <td>{{$lich_trinh->TenTuyen}}</td>
+                            <td>{{$lich_trinh->SoXe}}</td>     
+                            <td>{{$lich_trinh->GioDi}}</td>
+                            <td>{{$lich_trinh->GioDen}}</td>
+                            <td>{{$lich_trinh->NgayDi}}</td>
+                            <td><a href="./qllt_detail.html"><button class="btn btn-block btn-outline-info" data-toggle="tooltip" data-placement="top" title="Chi tiết"><i class="fas fa-info-circle"></i></button></a></td>
+                            <td><a href=""><button class="btn btn-block btn-outline-danger" data-toggle="tooltip" data-placement="top" title="Xoá"><i class="fas fa-trash-alt"></i></button></a></td>
+                        </tr>
+                      @endforeach
                   </tbody>
                 </table>
                 <div class="pagination pb-2">
@@ -109,16 +112,16 @@
             <div class="row">
                 <div class="col-sm-4 col-xs-4"><p>© 2019-2025 xeca.vn All Rights Reserved</p></div>
                 <div class="col-sm-4 col-xs-4"></div>
-                <div class="col-sm-2 col-xs-2"><img src="./vendor/img/dadangkybct.png" alt=""></div>
-                <div class="col-sm-2 col-xs-2"><img src="./vendor/img/bo-cong-thuong.png" alt=""></div>
+                <div class="col-sm-2 col-xs-2"><img src="assets/img/dadangkybct.png" alt=""></div>
+                <div class="col-sm-2 col-xs-2"><img src="assets/img/bo-cong-thuong.png" alt=""></div>
             </div>
         </div>
     </div>
     <!-- end footer -->   
-	<script src="./vendor/bootstrap/bootstrap.js"></script>
-    <script src="./vendor/fontawesome/fontawesome.js"></script>
-    <script src="./vendor/fontawesome/solid.js"></script>
-    <script src="./vendor/js/script.js"></script>
+	<script src="assets/bootstrap/bootstrap.js"></script>
+    <script src="assets/fontawesome/fontawesome.js"></script>
+    <script src="assets/fontawesome/solid.js"></script>
+    <script src="assets/js/script.js"></script>
 
     <!-- Search Form -->
     <script>
