@@ -26,4 +26,21 @@ class Xe extends Model
 
         return $data;
     }
+
+    public static function getAllXeTheoHang($IDHangXe){
+        $data = DB::table('xe')
+                ->join('hangxe','hangxe.IDHangXe','=','xe.IDHangXe')
+                ->join('loaixe','loaixe.IDLoaiXe','=','xe.IDLoaiXe')
+                ->where('xe.IDHangXe','=',$IDHangXe)
+                ->select('SoXe',
+                        'TenHangXe',
+                        'TenLoaiXe',
+                        'SoGhe',
+                        'xe.MoTa',
+                        'xe.created_at',
+                        'xe.updated_at')
+                ->get();
+
+        return $data;
+    }
 }

@@ -11,4 +11,9 @@ class XeController extends Controller
         $ds_xe = Xe::getAllXe();
         return view('admin.qlx',['ds_xe'=>$ds_xe]);
     }
+
+    public function showDSXeTheoHangView($id){
+        $ds_xe = Xe::getAllXeTheoHang($id);
+        return view('admin.qlx',['ds_xe'=>$ds_xe]);
+    }
 }

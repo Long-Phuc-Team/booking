@@ -11,4 +11,9 @@ class LichTrinhController extends Controller
         $ds_lich_trinh = LichTrinh::getAllLichTrinh();
         return view('admin.qllt',['ds_lich_trinh'=>$ds_lich_trinh]);
     }
+
+    public function showDSLichTrinhTheoTuyenView($id){
+        $ds_lich_trinh = LichTrinh::getAllLichTrinhTheoTuyen($id);
+        return view('admin.qllt',['ds_lich_trinh'=>$ds_lich_trinh]);
+    }
 }

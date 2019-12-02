@@ -28,4 +28,23 @@ class LichTrinh extends Model
 
         return $data;
     }
+
+    public static function getAllLichTrinhTheoTuyen($IDTuyen){
+        $data = DB::table('lichtrinh')
+                    ->join('tuyen','tuyen.IDTuyen','=','lichtrinh.IDTuyen')
+                    ->join('xe','xe.SoXe','=','lichtrinh.SoXe')
+                    ->where('lichtrinh.IDTuyen','=',$IDTuyen)
+                    ->select('IDLichTrinh',
+                            'TenTuyen',
+                            'lichtrinh.SoXe',
+                            'GioDi',
+                            'GioDen',
+                            'NgayDi',
+                            'lichtrinh.MoTa',
+                            'lichtrinh.created_at',
+                            'lichtrinh.updated_at')
+                    ->get();
+
+        return $data;
+    }
 }

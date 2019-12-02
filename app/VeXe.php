@@ -31,4 +31,26 @@ class VeXe extends Model
 
         return $data;
     }
+
+    public static function getAllVeXeTheoLichTrinh($IDLichTrinh){
+        $data = DB::table('vexe')
+                ->join('lichtrinh','lichtrinh.IDLichTrinh','=','vexe.IDLichTrinh')
+                ->join('tuyen','tuyen.IDTuyen','=','lichtrinh.IDTuyen')
+                ->join('khachhang','khachhang.IDKhachHang','=','vexe.IDKhachHang')
+                ->where('vexe.IDLichTrinh','=',$IDLichTrinh)
+                ->select('IDVeXe',
+                        'TenTuyen',
+                        'TenKhachHang',
+                        'lichtrinh.GiaVe',
+                        'lichtrinh.NgayDi',
+                        'lichtrinh.GioDi',
+                        'vexe.Ghe',
+                        'vexe.GiaVe',
+                        'khachhang.DienThoai',
+                        'vexe.created_at',
+                        'vexe.updated_at')
+                ->get();
+
+        return $data;
+    }
 }
