@@ -27,7 +27,7 @@
                 <th>DienThoai</th>
                 <th>MoTa</th>
                 <th>NgayThem</th>
-                <th colspan="2"><a href="./qlhx_add.html"><button class="btn btn-block btn-outline-success" data-toggle="tooltip" data-placement="top" title="Thêm"><i class="fas fa-plus-circle"></i></button></a></th>
+                <th colspan="2"><a href="admin/them-hang-xe"><button class="btn btn-block btn-outline-success" data-toggle="tooltip" data-placement="top" title="Thêm"><i class="fas fa-plus-circle"></i></button></a></th>
             </tr>
           </thead>
           <tbody id="myTablebd">
@@ -38,8 +38,8 @@
                     <td>{{$hang_xe->DienThoai}}</td>
                     <td>{{$hang_xe->MoTa}}</td>
                     <td>{{$hang_xe->created_at}}</td>
-                    <td><a href="./qlhx_edit.html"><button class="btn btn-block btn-outline-info" data-toggle="tooltip" data-placement="top" title="Sửa"><i class="fas fa-edit"></i></button></a></td>
-                    <td><a href=""><button class="btn btn-block btn-outline-danger" data-toggle="tooltip" data-placement="top" title="Xoá"><i class="fas fa-trash-alt"></i></button></a></td>
+                    <td><a href="admin/sua-hang-xe/{{$hang_xe->IDHangXe}}"><button class="btn btn-block btn-outline-info" data-toggle="tooltip" data-placement="top" title="Sửa"><i class="fas fa-edit"></i></button></a></td>
+                    <td><a href="admin/danh-sach-xe/{{$hang_xe->IDHangXe}}"><button class="btn btn-block btn-outline-danger" data-toggle="tooltip" data-placement="top" title="DS Xe"><i class="fas fa-trash-alt"></i></button></a></td>
                 </tr>
               @endforeach
           </tbody>

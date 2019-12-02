@@ -47,4 +47,28 @@ class LichTrinh extends Model
 
         return $data;
     }
+
+    public static function getLichTrinhById($IDLichTrinh){
+        $data = DB::table('lichtrinh')
+                    ->join('tuyen','tuyen.IDTuyen','=','lichtrinh.IDTuyen')
+                    ->join('xe','xe.SoXe','=','lichtrinh.SoXe')
+                    ->join('hangxe','hangxe.IDHangXe','=','xe.IDHangXe')
+                    ->where('lichtrinh.IDLichTrinh','=',$IDLichTrinh)
+                    ->select('IDLichTrinh',
+                            'TenTuyen',
+                            'lichtrinh.IDTuyen',
+                            'lichtrinh.SoXe',
+                            'xe.IDHangXe',
+                            'hangxe.TenHangXe',
+                            'GioDi',
+                            'GioDen',
+                            'NgayDi',
+                            'lichtrinh.MoTa',
+                            'lichtrinh.created_at',
+                            'lichtrinh.updated_at',
+                            'lichtrinh.GiaVe')
+                    ->first();
+
+        return $data;
+    }
 }

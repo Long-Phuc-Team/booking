@@ -43,4 +43,23 @@ class Xe extends Model
 
         return $data;
     }
+
+    public static function getXeById($SoXe){
+        $data = DB::table('xe')
+                ->join('hangxe','hangxe.IDHangXe','=','xe.IDHangXe')
+                ->join('loaixe','loaixe.IDLoaiXe','=','xe.IDLoaiXe')
+                ->where('xe.SoXe','=',$SoXe)
+                ->select('SoXe',
+                        'TenHangXe',
+                        'xe.IDHangXe',
+                        'xe.IDLoaiXe',
+                        'TenLoaiXe',
+                        'SoGhe',
+                        'xe.MoTa',
+                        'xe.created_at',
+                        'xe.updated_at')
+                ->first();
+
+        return $data;
+    }
 }

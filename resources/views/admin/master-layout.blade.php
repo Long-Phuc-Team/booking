@@ -21,28 +21,28 @@
 							<a class="navbar-brand" href="#"><img src="assets/img/lg-white.png" alt=""></a>
 						<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
 							<li class="nav-item active">
-								<a class="nav-link" href="./admin.html">Trang Chủ</a>
+								<a class="nav-link" href="admin">Trang Chủ</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="./qlhx.html">Quản Lý Hãng Xe</a>
+								<a class="nav-link" href="admin/danh-sach-hang-xe">Quản Lý Hãng Xe</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="./qlx.html">quản lý xe</a>
+								<a class="nav-link" href="admin/danh-sach-xe">quản lý xe</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="./qlt.html">quản lý tuyến</a>
+								<a class="nav-link" href="admin/danh-sach-tuyen-xe">quản lý tuyến</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="./qllt.html">quản lý lịch trình</a>
+								<a class="nav-link" href="admin/danh-sach-lich-trinh">quản lý lịch trình</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="./qlkh.html">quản lý khách hàng</a>
+                                <a class="nav-link" href="#">quản lý khách hàng</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="./qlvx.html">quản lý vé xe</a>
+                                <a class="nav-link" href="admin/danh-sach-ve-xe">quản lý vé xe</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="./qlttdvx.html">quản lý trạng thái đặt vé</a>
+                                <a class="nav-link" href="admin/trang-thai-dat-ve">quản lý trạng thái đặt vé</a>
                             </li>
 						</ul>
 					</div>

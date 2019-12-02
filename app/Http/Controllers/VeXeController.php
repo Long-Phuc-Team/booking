@@ -16,4 +16,9 @@ class VeXeController extends Controller
         $ds_ve_xe = VeXe::getAllVeXeTheoLichTrinh($id);
         return view('admin.qlvx',['ds_ve_xe'=>$ds_ve_xe]);
     }
+
+    public function showViewChiTietVeXe($id){
+        $ve_xe = VeXe::getVeXeById($id);
+        return view('admin.qlvx_detail',['ve_xe'=>$ve_xe]);
+    }
 }

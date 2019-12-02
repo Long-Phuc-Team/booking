@@ -28,8 +28,12 @@ class LichTrinhController extends Controller
     }
 
     public function showViewSuaLichTrinh($id){
+        $ds_tuyen_xe = TuyenXe::getAllTuyenXe();
+        $ds_hang_xe = HangXe::getAllHangXe();
         $lich_trinh = LichTrinh::getLichTrinhById($id);
-        return view('admin.qllt_edit',['lich_trinh'=>$lich_trinh]);
+        return view('admin.qllt_edit',['lich_trinh'=>$lich_trinh,
+                                        'ds_tuyen_xe'=>$ds_tuyen_xe,
+                                        'ds_hang_xe'=>$ds_hang_xe]);
     }
 
     public function showViewChiTietLichTrinh($id){
@@ -82,21 +86,28 @@ class LichTrinhController extends Controller
     public function suaLichTrinh($request){
         $this->validate(
             $request,
-            ['DiemDi'=>'required',
-            'DiemDen'=>'required',
-            'TenLichTrinh'=>'required'],
+            ['GioDi'=>'required',
+            'GioDen'=>'required',
+            'IDTuyen'=>'required',
+            'SoXe'=>'required',
+            'NgayDi'=>'required',
+            'GiaVe'=>'required'],
 
-            ['DiemDi.required'=>"Bạn chưa nhập điểm đi",
-            'DiemDen.required'=>"Bạn chưa nhập điểm đến",
-            'TenLichTrinh.required'=>"Bạn chưa nhập tên tuyến"]
+            ['GioDi.required'=>"Bạn chưa nhập giờ đi",
+            'GioDen.required'=>"Bạn chưa nhập giờ đến",
+            'NgayDi.required'=>"Bạn chưa chọn ngày đi",
+            'IDTuyen.required'=>"Bạn chưa chọn tuyến",
+            'SoXe.required'=>"Bạn chưa chọn xe",
+            'GiaVe.required'=>"Bạn chưa nhập giá vé"]
         );
 
         $lich_trinh = LichTrinh::find($request->IDLichTrinh);
-        $lich_trinh->TenLichTrinh= $request->TenLichTrinh;
-        $lich_trinh->DiemDi= $request->DiemDi;
-        $lich_trinh->DiemDen= $request->DiemDen;
-        $lich_trinh->DoDai= $request->DoDai;
-        $lich_trinh->ThoiGian= $request->ThoiGian;
+        $lich_trinh->IDTuyen= $request->IDTuyen;
+        $lich_trinh->SoXe= $request->SoXe;
+        $lich_trinh->GioDi= $request->GioDi;
+        $lich_trinh->GioDen= $request->GioDen;
+        $lich_trinh->NgayDi= $request->NgayDi;
+        $lich_trinh->GiaVe= $request->GiaVe;
         $lich_trinh->MoTa= $request->MoTa;
         $lich_trinh->save();
     }

@@ -41,15 +41,24 @@ Route::group(['prefix'=>'admin'],function(){
     Route::post('them-tuyen-xe', 'TuyenXeController@batSuKienClickButton');
     Route::get('them-lich-trinh', 'LichTrinhController@showViewThemLichTrinh');
     Route::post('them-lich-trinh', 'LichTrinhController@batSuKienClickButton');
+    Route::get('them-xe', 'XeController@showViewThemXe');
+    Route::post('them-xe', 'XeController@batSuKienClickButton');
+
 
     // Sua
     Route::get('sua-hang-xe/{id}', 'HangXeController@showViewSuaHangXe');
     Route::post('sua-hang-xe', 'HangXeController@batSuKienClickButton');
     Route::get('sua-tuyen-xe/{id}', 'TuyenXeController@showViewSuaTuyenXe');
     Route::post('sua-tuyen-xe', 'TuyenXeController@batSuKienClickButton');
+    Route::get('sua-lich-trinh/{id}', 'LichTrinhController@showViewSuaLichTrinh');
+    Route::post('sua-lich-trinh', 'LichTrinhController@batSuKienClickButton');
+    Route::get('sua-xe/{id}', 'XeController@showViewSuaXe');
+    Route::post('sua-xe', 'XeController@batSuKienClickButton');
 
     //Chi tiết
     Route::get('chi-tiet-tuyen-xe/{id}', 'TuyenXeController@showViewChiTietTuyenXe');
+    Route::get('chi-tiet-ve-xe/{id}', 'VeXeController@showViewChiTietVeXe');
+    Route::get('chi-tiet-xe/{id}', 'XeController@showViewChiTietXe');
 });
 
 // Load ajax
