@@ -17,4 +17,12 @@ class HangXe extends Model
 
         return $data;
     }
+
+    public static function getHangXeById($IDHangXe){
+        $data = DB::table('hangxe')
+                    ->where('IDHangXe','=',$IDHangXe)
+                    ->first();
+
+        return $data;
+    }
 }

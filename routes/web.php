@@ -23,7 +23,7 @@ Route::group(['prefix'=>'admin'],function(){
     Route::get('danh-sach-hang-xe', 'HangXeController@showDSHangXeView');
     Route::get('danh-sach-khach-hang', 'KhachHangController@showDSKhachHangView');
     Route::get('danh-sach-lich-trinh', 'LichTrinhController@showDSLichTrinhView');
-    Route::get('danh-sach-tuyen', 'TuyenXeController@showDSTuyenView');
+    Route::get('danh-sach-tuyen-xe', 'TuyenXeController@showDSTuyenXeView');
     Route::get('danh-sach-ve-xe', 'VeXeController@showDSVeXeView');
     Route::get('danh-sach-xe', 'XeController@showDSXeView');
     Route::get('trang-thai-dat-ve', 'TrangThaiDatVeController@showTTDVXView');
@@ -37,4 +37,22 @@ Route::group(['prefix'=>'admin'],function(){
     // Them
     Route::get('them-hang-xe', 'HangXeController@showViewThemHangXe');
     Route::post('them-hang-xe', 'HangXeController@batSuKienClickButton');
+    Route::get('them-tuyen-xe', 'TuyenXeController@showViewThemTuyenXe');
+    Route::post('them-tuyen-xe', 'TuyenXeController@batSuKienClickButton');
+    Route::get('them-lich-trinh', 'LichTrinhController@showViewThemLichTrinh');
+    Route::post('them-lich-trinh', 'LichTrinhController@batSuKienClickButton');
+
+    // Sua
+    Route::get('sua-hang-xe/{id}', 'HangXeController@showViewSuaHangXe');
+    Route::post('sua-hang-xe', 'HangXeController@batSuKienClickButton');
+    Route::get('sua-tuyen-xe/{id}', 'TuyenXeController@showViewSuaTuyenXe');
+    Route::post('sua-tuyen-xe', 'TuyenXeController@batSuKienClickButton');
+
+    //Chi tiết
+    Route::get('chi-tiet-tuyen-xe/{id}', 'TuyenXeController@showViewChiTietTuyenXe');
+});
+
+// Load ajax
+Route::group(['prefix'=>'ajax'],function(){
+    Route::get('load-cbx-xe-theo-cbx-hang/{id}', 'LichTrinhController@loadCbxXeTheoHang');
 });

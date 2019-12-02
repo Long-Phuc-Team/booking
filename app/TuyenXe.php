@@ -17,4 +17,12 @@ class TuyenXe extends Model
 
         return $data;
     }
+
+    public static function getTuyenXeById($IDTuyen){
+        $data = DB::table('tuyen')
+                        ->where('IDTuyen','=',$IDTuyen)
+                        ->first();
+
+        return $data;
+    }
 }

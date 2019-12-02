@@ -33,7 +33,7 @@
             </tr>
           </thead>
           <tbody id="myTablebd">
-              @foreach ($ds_tuyen as $tuyen)
+              @foreach ($ds_tuyen_xe as $tuyen)
                 <tr>
                     <td>{{$tuyen->IDTuyen}}</td>
                     <td>{{$tuyen->TenTuyen}}</td>
